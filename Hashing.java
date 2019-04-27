@@ -5,14 +5,15 @@ import java.math.BigInteger;
 public class Hashing{
 
     public static void main(String args[]) throws NoSuchAlgorithmException{ 
-		//For the test string of "Hello, World!", we expect the result:
-		//dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f
+	//For the test string of "Hello, World!", we expect the result:
+	//dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a362182986f
         String string = "Hello, World!"; 
         String hashedString = SHA256(string, 16);
         System.out.println(string);
         System.out.println(hashedString); 
     } 
-
+    //NoSuchAlgorithmWxception is thrown when a particular cryptographic  
+    //algorithm is requested but is not available in the environment.
     public static String SHA256(String string, int N){ 
         try { 
             MessageDigest hasher = MessageDigest.getInstance("SHA-256"); 
