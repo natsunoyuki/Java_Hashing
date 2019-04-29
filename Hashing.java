@@ -23,7 +23,7 @@ public class Hashing{
             return toInt.toString(N); //return a hex string  
         } 
         catch(NoSuchAlgorithmException except){ 
-            System.out.println("No such algorithm exception! "+except); 
+            System.out.println(except); 
             return null; 
         } 
     }
