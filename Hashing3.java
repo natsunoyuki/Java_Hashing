@@ -2,6 +2,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest; 
 import java.math.BigInteger;
 
+//The family of Hashing.java files are more about showing different ways
+//of handling exceptions.
+
 //In this file, we use a separate function SHA256Except to specifically 
 //handle the the NoSuchAlgorithmException thrown by SHA256. This enables
 //us to not have to explicitly use try-catch in the main() method, or to
