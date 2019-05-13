@@ -2,6 +2,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest; 
 import java.math.BigInteger;
 
+//The family of Hashing.java files are more about showing different ways
+//of handling exceptions.
+
 //In this file, main uses try-catch to catch the NoSuchAlgorithmException
 //thrown by SHA256. This is different method from Hashing.java. This
 //method frees the user from having force functions to throw Exceptions,
