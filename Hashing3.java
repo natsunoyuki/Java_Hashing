@@ -46,6 +46,7 @@ public class Hashing3{
 	    }
         return H; //return a zero padded hex string     
     }
+    
     public static String ZeroString(int N){
 		//returns a string of zeros of length N 
 		if(N<0){
