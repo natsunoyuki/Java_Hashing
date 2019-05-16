@@ -23,6 +23,7 @@ public class Hashing2{
 		    System.err.println(e.getMessage());
 		}
     } 
+
     //NoSuchAlgorithmException is thrown when a particular cryptographic  
     //algorithm is requested but is not available in the environment.
     public static String SHA256(String string, int N, int M) throws NoSuchAlgorithmException{ 
@@ -39,6 +40,7 @@ public class Hashing2{
 	    }
         return H; //return a zero padded hex string     
     }
+
     public static String ZeroString(int N){
 		//returns a string of zeros of length N 
 		if(N<0){
