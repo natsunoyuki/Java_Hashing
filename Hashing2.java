@@ -19,15 +19,15 @@ public class Hashing2{
             String hashedString = SHA256(string, 16, 64);
             System.out.println(string);
             System.out.println(hashedString); 
-		}catch(NoSuchAlgorithmException e){
-		    System.err.println(e.getMessage());
-		}
+	}catch(NoSuchAlgorithmException e){
+	    System.err.println(e.getMessage());
+	}
     } 
 
     //NoSuchAlgorithmException is thrown when a particular cryptographic  
     //algorithm is requested but is not available in the environment.
     public static String SHA256(String string, int N, int M) throws NoSuchAlgorithmException{ 
-		//if this throws Exception, then main must use try-catch
+	//if this throws Exception, then main must use try-catch
         MessageDigest hasher = MessageDigest.getInstance("SHA-256"); 
         //the input string has to be encoded into bytes first!
         byte[] hashedbytes = hasher.digest(string.getBytes()); 
@@ -36,20 +36,20 @@ public class Hashing2{
         //convert the array of hashed bytes to a BigInt object
         String H = toInt.toString(N); //return a hex string  
         if(H.length() < M){
-			H=ZeroString(M-H.length())+H; 
-	    }
+	    H=ZeroString(M-H.length())+H; 
+	}
         return H; //return a zero padded hex string     
     }
 
     public static String ZeroString(int N){
-		//returns a string of zeros of length N 
-		if(N<0){
-		    return "";
-		}
-		String string = "";
-		for(int i=0;i<N;i++){
-		    string += "0";
-		}
-		return string;
+	//returns a string of zeros of length N 
+	if(N<0){
+	    return "";
 	}
+	String string = "";
+	for(int i=0;i<N;i++){
+	    string += "0";
+	}
+	return string;
+    }
 }
