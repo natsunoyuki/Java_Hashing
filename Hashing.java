@@ -41,6 +41,7 @@ public class Hashing{
         } 
         return H;
     }
+
     public static String ZeroString(int N){
         //returns a string of zeros of length N 
         if(N<0){
@@ -51,5 +52,5 @@ public class Hashing{
             string += "0";
         }
         return string;
-	}
+    }
 }
